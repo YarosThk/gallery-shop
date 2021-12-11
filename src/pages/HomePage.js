@@ -1,10 +1,10 @@
-import { Container } from "../components/styled/Container.styled"
 import { Flex, Heading, IntroDescription, IntroStyled, IntroImages } from "../components/styled/Home.styled"
 import IntroImage1 from "../images/intro_tower_bridge.jpg";
 import IntroImage2 from "../images/intro_autumn_park.jpg";
 
 
 export const HomePage = () =>{
+
     return(
         <Flex>
             <IntroStyled>

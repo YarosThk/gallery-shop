@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.header`
     background-color: ${({theme})=> theme.colors.header};
@@ -19,10 +20,11 @@ export const Nav = styled.nav`
     justify-content: space-around;
 `
 
-export const NavbarLink = styled.a`
+export const NavbarLink = styled(Link)`
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.button};
     cursor: pointer;
+    text-decoration: none;
     
     &:hover{
         transform: scale(0.98);

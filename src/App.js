@@ -1,7 +1,8 @@
+import { Outlet } from 'react-router';
 import { ThemeProvider } from 'styled-components';
 import {Header} from './components/Header';
-import { HomePage } from './pages/HomePage';
 import GlobalStyle from './components/styled/GlobalStyles';
+
 
 const theme = {
   colors: {
@@ -20,7 +21,7 @@ function App() {
       <GlobalStyle />
       <>
         <Header/>
-        <HomePage/>
+        <Outlet/>
       </>
     </ThemeProvider>
   );

@@ -9,9 +9,9 @@ export const Header = () =>{
             <Container>
                 <Logo> Galry </Logo>
                 <Nav>
-                    {/* <Button> Home </Button> */}
-                    <NavbarLink> Home </NavbarLink>
-                    <NavbarLink> Shop </NavbarLink>
+                    <NavbarLink to="/">Home </NavbarLink>
+                    <NavbarLink to="/shop">Shop </NavbarLink>
+                    {/* <Link to="/shop"> Shop </Link> */}
                     <Button> <FaShoppingCart /> </Button>
                 </Nav>
             </Container>
