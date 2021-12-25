@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { PhotoCard } from "../components/PhotoCard.js";
 import { ShoppingGrid } from "../components/styled/Shopping.styled.js"
-import {photographs} from "../data/photographs.js"
+import {photographs} from "../data/photographs.js" //maybe in the future can import it un App and then pass in props to all components that need photographs
+import { Link } from "react-router-dom";
 
 export const ShoppingPage = () => {
     const [products, setProducts] = useState(null)
@@ -13,7 +14,9 @@ export const ShoppingPage = () => {
     return(
         <ShoppingGrid>
             {products&&products.map(prod => (
-                <PhotoCard key={prod.id} title={prod.title} description={prod.description} src={prod.src}  />
+                <Link to={`/shop/${prod.id}`} style={{ textDecoration: "none", color: "black" }} key={prod.id}>
+                    <PhotoCard title={prod.title} description={prod.description} src={prod.src} />
+                </Link>
             ))}
         </ShoppingGrid>
     )

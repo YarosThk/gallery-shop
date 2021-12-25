@@ -26,3 +26,4 @@ export const HomePage = () =>{
         </Flex>
         )
 }
+

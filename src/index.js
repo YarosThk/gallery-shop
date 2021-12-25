@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ShoppingPage } from './pages/ShoppingPage';
 import { HomePage } from './pages/HomePage';
+import { ShoppingPage } from './pages/ShoppingPage';
+import { ItemPage } from './pages/ItemPage';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<HomePage />}/>
-          <Route path="/shop" element={<ShoppingPage />}/>
+          <Route path ="/" element={<HomePage/>} />
+          <Route path="shop" element={<ShoppingPage />}/>
+          <Route path="shop/:itemId" element={<ItemPage />} />
           <Route
             path="*"
             element={
