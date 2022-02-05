@@ -1,9 +1,9 @@
 import { StyledHeader, Nav, Logo, NavbarLink } from "./styled/Header.styled"
 import { Container } from "./styled/Container.styled"
 import { FaShoppingCart } from 'react-icons/fa';
-import { Button } from "./styled/Button";
+import { CartButton } from "./styled/CartButton";
 
-export const Header = () =>{
+export const Header = ({cartItems}) =>{
     return(
         <StyledHeader>
             <Container>
@@ -11,8 +11,7 @@ export const Header = () =>{
                 <Nav>
                     <NavbarLink to="/">Home </NavbarLink>
                     <NavbarLink to="/shop">Shop </NavbarLink>
-                    {/* <Link to="/shop"> Shop </Link> */}
-                    <Button> <FaShoppingCart /> </Button>
+                    <CartButton to="/cart"> <FaShoppingCart /> <span>{cartItems}</span></CartButton>
                 </Nav>
             </Container>
         </StyledHeader>

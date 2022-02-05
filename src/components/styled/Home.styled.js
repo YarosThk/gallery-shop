@@ -30,7 +30,7 @@ export const IntroImages = styled.div`
     left: 0;
 
     img{
-        border-radius: 20px;
+        border-radius: 5px;
         width:350px;
         height: auto;
     }

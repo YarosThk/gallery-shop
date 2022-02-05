@@ -51,3 +51,38 @@ export const ImgContainer = styled.div`
 
 export const PreviewImg = styled.img`
 `
+
+
+export const ShopppingCard = styled.div`
+    width: 100%;
+    height: auto;
+    margin: 40px;
+    padding: 0.9rem;
+    display: grid;
+    grid-template-rows: [title-start] 2rem [title-end] auto [last-line];
+    grid-template-columns:[start-picture] auto [end-picture] 1fr [last-column];
+    grid-template-areas:
+    "title title"
+    "picture options";
+    background: ${({ theme }) => theme.colors.header};
+    ${'' /* border-radius: 0.8rem; */}
+    ${'' /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */}
+
+    h2{
+        grid-area: title;
+        display: flex;  
+    }
+`
+
+export const ShoppingCardOptions = styled.div`
+    grid-area: options;
+    padding: 0 0.5rem;
+`
+
+export const ImgContainerBig = styled.div`
+    width: 450px;
+    height: auto;
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+`

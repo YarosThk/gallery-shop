@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&family=Roboto+Mono:wght@100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
   *,
   *::before,
@@ -14,13 +14,17 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: ${({theme})=> theme.colors.lightBg};
     margin: 0;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size:1.15em;
     margin-bottom: 5.2rem;
   }
 
   img{
     max-width: 100%;
+  }
+
+  li{
+    list-style: none;
   }
 `
 

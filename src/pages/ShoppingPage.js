@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { PhotoCard } from "../components/PhotoCard.js";
 import { ShoppingGrid } from "../components/styled/Shopping.styled.js"
-import {photographs} from "../data/photographs.js" //maybe in the future can import it un App and then pass in props to all components that need photographs
+import {photographs} from "../data/photographs.js" //maybe in the future can import it in App and then pass in props to all components that need photographs
 import { Link } from "react-router-dom";
 
 export const ShoppingPage = () => {

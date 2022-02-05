@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Button = styled.button`
+export const CartButton = styled(Link)`
     border-radius: 50%;
     height: 50px;
     width: 50px;
