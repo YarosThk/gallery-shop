@@ -1,49 +1,137 @@
 import styled from "styled-components";
 
-export const Flex = styled.div`
-    padding: 0 40px;
-    margin: 0 auto;
+export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+`
+
+export const Flex = styled.div`
+    margin: 2rem 10rem;
+    position: relative;
+    text-align: center;
     background-color: black;
     color: ${({ theme }) => theme.colors.header};
+    height: 600px;
+
+    @media screen and (max-width: 1200px) {
+        margin: 1rem 2rem;
+        height: 500px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin: 1rem 2rem;
+        height: 400px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 1rem 2rem;
+        height: 300px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin: 1rem 2rem;
+        height: 200px;
+    }
+
 `
-export const IntroStyled = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-`
+
 export const Heading = styled.h1`
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    font-size: 4rem;
 
+    @media screen and (max-width: 1200px) {
+        font-size: 3rem;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 2.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.3rem;
+    } 
 `
 
-export const IntroDescription = styled.div`
-    width: 40%;
-    margin-right: 40px;
+export const IntroImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
 
-export const IntroImages = styled.div`
-    position: relative;
-    top: 0;
-    left: 0;
+export const Footer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.header};
+    height: 40rem;
+    width: 100%;
+    font-size: 10px;
 
-    img{
-        border-radius: 5px;
-        width:350px;
-        height: auto;
+    @media screen and (max-width: 1200px) {
+        height: 35rem;
     }
 
-    img:nth-child(1){
-        position: relative;
-        top: 0;
-        left: 0;
+    @media screen and (max-width: 1024px) {
+        height: 26rem;
     }
 
-    img:nth-child(2){
-        position: absolute;
-        top: 40px;
-        left: 200px;
+    @media screen and (max-width: 768px) {
+        height: 20rem;
     }
+
+    @media screen and (max-width: 480px) {
+        height: 16rem;
+    }
+`
+
+export const FooterMessage = styled.h2`
+    font-size: 5em;
+    margin-bottom: 1em;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 4em;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 3em;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2.5em;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.3em;
+    } 
+`
+
+export const MediaIconsContainer = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-item: center;
+    font-size: 3em;
+    width: 15%;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 2em;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 1.8em;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1em;
+    } 
 `

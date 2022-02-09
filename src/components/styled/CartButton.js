@@ -10,11 +10,11 @@ export const CartButton = styled(Link)`
     font-size: 16px;
     font-weight: 700;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: ${({theme})=> theme.colors.button};
-    color: ${({ theme }) => theme.colors.header};
+    ${'' /* background-color: ${({theme})=> theme.colors.header}; */}
+    color: ${({ theme }) => theme.colors.font};
 
     &:hover{
         opocity: 0.9;

@@ -6,83 +6,98 @@ export const ShoppingGrid = styled.div`
     justify-content: center;
 `
 
-export const PhotoCardStyled = styled.div`
-    width: 500px;
-    height: auto;
+//--------------------------------------SHOP GALLERY-------------------------------------------------------------------
+
+export const GridContainer = styled.div`
     margin: 40px;
-    padding: 0.9rem;
-    display: grid;
-    grid-template-rows: [title-start] 2rem [title-end] auto [last-line];
-    grid-template-columns:[start-picture] auto [end-picture] 1fr [last-column];
-    grid-template-areas:
-    "title title"
-    "picture description";
-    background: ${({ theme }) => theme.colors.header};
-    border-radius: 0.8rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`
+export const GalleryGrid = styled.div`
+    columns: 4;
+    column-gap: 1rem;
 
-    &:hover{
-        transition: transform 150ms ease-out;
-        transform: scale(1.01);
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-        cursor: pointer;
+    @media screen and (max-width: 1200px) {
+        columns: 4;
     }
 
-    h2{
-        grid-area: title;
-        display: flex;
-        
+    @media screen and (max-width: 1024px) {
+        columns: 3;
     }
 
-    &>p{
-        grid-area: description;
-        padding: 0 0.5rem;
-    }
+    @media screen and (max-width: 768px) {
+        columns: 2;
+    } 
+
+    @media screen and (max-width: 480px) {
+        columns: 1;
+    } 
 `
 
-export const ImgContainer = styled.div`
-    width: 250px;
-    height: auto;
-    grid-area: picture;
-    display: flex;
-    align-items: center;
-    align-content: center;
+export const PhotoStyled = styled.figure`
+    width: 100%;
+    margin-bottom: 1rem;
 `
 
 export const PreviewImg = styled.img`
+    width:100%;
+    vertical-align: bottom;
 `
 
+//-------------------------------------- END SHOP GALLERY-------------------------------------------------------------------
+
+//-------------------------------------- START ITEM PAGE-------------------------------------------------------------------
 
 export const ShopppingCard = styled.div`
     width: 100%;
     height: auto;
     margin: 40px;
     padding: 0.9rem;
-    display: grid;
-    grid-template-rows: [title-start] 2rem [title-end] auto [last-line];
-    grid-template-columns:[start-picture] auto [end-picture] 1fr [last-column];
-    grid-template-areas:
-    "title title"
-    "picture options";
+    display: flex;
     background: ${({ theme }) => theme.colors.header};
-    ${'' /* border-radius: 0.8rem; */}
-    ${'' /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */}
 
-    h2{
-        grid-area: title;
-        display: flex;  
-    }
+    @media screen and (max-width: 768px) {
+        align-items: center;
+        flex-direction: column;
+    } 
 `
 
-export const ShoppingCardOptions = styled.div`
-    grid-area: options;
-    padding: 0 0.5rem;
+export const ShoppingCardOptions = styled.section`
+    width: 60%;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 3.5rem;
+
+    }
+
+    p{
+        width:60%;
+        margin: 3rem 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    ul{
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    select{
+        width: 30%;
+        height: 3rem;
+        border: 1px solid silver;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 3rem 0;
+    } 
 `
 
 export const ImgContainerBig = styled.div`
+    max-width: 100%;
     width: 450px;
     height: auto;
-    grid-area: picture;
     display: flex;
     align-items: center;
 `

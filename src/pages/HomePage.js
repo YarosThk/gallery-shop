@@ -1,29 +1,36 @@
-import { Flex, Heading, IntroDescription, IntroStyled, IntroImages } from "../components/styled/Home.styled"
+import { HomeContainer, Flex, Heading, IntroImage, Footer, FooterMessage, MediaIconsContainer  } from "../components/styled/Home.styled"
+import { FaInstagram, FaGithub, FaYoutube, FaTwitter } from 'react-icons/fa';
 import IntroImage1 from "../images/intro_tower_bridge.jpg";
-import IntroImage2 from "../images/intro_autumn_park.jpg";
+import IntroImage2 from "../images/intro_beach.jpg";
+import IntroImage3 from "../images/intro_travel.jpg";
 
 
 export const HomePage = () =>{
 
     return(
-        <Flex>
-            <IntroStyled>
-                <IntroDescription>
-                    <Heading>Get your prints now!</Heading>
-                    <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui 
-                        blanditiis praesentium voluptatum deleniti atque corrupti quos 
-                        dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
-                        similique sunt in culpa qui officia deserunt mollitia animi, id est laborum 
-                        et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-                    </p>
-                </IntroDescription>
-                <IntroImages>
-                    <img src={IntroImage2} alt="" />
-                    <img src={IntroImage1} alt=""/>                    
-                </IntroImages>
-            </IntroStyled>
-        </Flex>
+        <HomeContainer>
+            <Flex>
+                <Heading>OFFICIAL PRINTS</Heading>
+                <IntroImage src={IntroImage1}/>
+            </Flex>
+            <Flex>
+                <Heading>PHOTO SHOOTS</Heading>
+                <IntroImage src={IntroImage2}/>
+            </Flex>
+            <Flex>
+                <Heading>TRAVEL PHOTOGRAPHY</Heading>
+                <IntroImage src={IntroImage3}/>
+            </Flex>
+            <Footer>
+                <FooterMessage>Follow</FooterMessage>
+                <MediaIconsContainer>
+                    <FaInstagram/>
+                    <FaGithub/>
+                    <FaYoutube/>
+                    <FaTwitter/>
+                </MediaIconsContainer>
+            </Footer>
+        </HomeContainer>
         )
 }
 

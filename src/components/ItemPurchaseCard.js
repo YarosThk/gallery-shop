@@ -22,19 +22,19 @@ export const ItemPurchaseCard = ({ id, title, description, printSize, src, addIt
 
     return (
         <ShopppingCard>
-            <h2>{title}</h2>
             <ImgContainerBig><PreviewImg src={src} alt="" srcset="" /></ImgContainerBig>
             <ShoppingCardOptions>
+                <h1>{title}</h1>
                 <p>{description}</p>
                 <ul>
-                    <li>Small print 12"x18" - {printSize.smallPrint}€</li>
-                    <li>Medium print 18"x24" - {printSize.mediumPrint}€</li>
-                    <li>Large print 24"x36" - {printSize.largePrint}€</li>
+                    <li>Small print 18"x12" - {printSize.smallPrint}€</li>
+                    <li>Medium print 24"x18" - {printSize.mediumPrint}€</li>
+                    <li>Large print 36"x24" - {printSize.largePrint}€</li>
                 </ul>
                 <select name="select" value={selectedPrintSize} onChange={handleSelectionChange}>
-                    <option value="smallPrint">Small print</option>
-                    <option value="mediumPrint">Medium print</option>
-                    <option value="largePrint">Large print</option>
+                    <option value="smallPrint">Small print (18"x12")</option>
+                    <option value="mediumPrint">Medium print (24"x18")</option>
+                    <option value="largePrint">Large print (36"x24")</option>
                 </select>
                 <div>
                     <button onClick={handleAddItem}> Add to Cart</button>

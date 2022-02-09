@@ -22,7 +22,7 @@ export const Nav = styled.nav`
 
 export const NavbarLink = styled(Link)`
     font-size: 2rem;
-    color: ${({ theme }) => theme.colors.button};
+    color: ${({ theme }) => theme.colors.font};
     cursor: pointer;
     text-decoration: none;
     

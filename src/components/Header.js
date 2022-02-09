@@ -11,7 +11,7 @@ export const Header = ({cartItems}) =>{
                 <Nav>
                     <NavbarLink to="/">Home </NavbarLink>
                     <NavbarLink to="/shop">Shop </NavbarLink>
-                    <CartButton to="/cart"> <FaShoppingCart /> <span>{cartItems}</span></CartButton>
+                    <CartButton to="/cart"><FaShoppingCart /> <span> {cartItems}</span></CartButton>
                 </Nav>
             </Container>
         </StyledHeader>

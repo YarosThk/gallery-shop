@@ -11,12 +11,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  html{
+    font-size:10px;
+  }
+
   body {
-    background: ${({theme})=> theme.colors.lightBg};
+    background: ${({theme})=> theme.colors.header};
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size:1.15em;
-    margin-bottom: 5.2rem;
   }
 
   img{

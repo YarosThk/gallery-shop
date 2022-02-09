@@ -1,5 +1,7 @@
 import { PhotoCardStyled, ImgContainer, PreviewImg} from "./styled/Shopping.styled.js"
 
+//NOT USED ANYMORE, DELETE LATER
+
 export const PhotoCard = ({id, title, description, src}) => {
     return(
         <PhotoCardStyled>

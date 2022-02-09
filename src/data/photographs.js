@@ -39,8 +39,8 @@ export const photographs = [
         {
             id: 4,
             src: sea_shore,
-            title: "End of the day.",
-            description: "Sometime you need to take a walk on a wet sand to feel fresha again.",
+            title: "At the end of the day.",
+            description: "Sometime you need to take a walk on a wet sand to feel fresh again. Cherish this moment, gaze at the last rays as the sun sets, see parents and children play and let it fill you with love.",
             printSize:{smallPrint: 14.99,
                 mediumPrint: 24.99,
                 largePrint: 44.99}
