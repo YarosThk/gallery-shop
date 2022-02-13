@@ -52,7 +52,7 @@ export const ShopppingCard = styled.div`
     margin: 40px;
     padding: 0.9rem;
     display: flex;
-    background: ${({ theme }) => theme.colors.header};
+    
 
     @media screen and (max-width: 768px) {
         align-items: center;
@@ -65,27 +65,35 @@ export const ShoppingCardOptions = styled.section`
     margin-left: 4rem;
     display: flex;
     flex-direction: column;
+    font-weight: ${({ theme }) => theme.fontWeight.thin};
 
     h1{
         font-size: 3.5rem;
-
+        letter-spacing: 3px;
+        font-weight: ${({ theme }) => theme.fontWeight.medium};
     }
 
     p{
         width:60%;
         margin: 3rem 0 2rem;
         font-size: 1.5rem;
+        letter-spacing: 1.7px;
     }
 
     ul{
         font-size: 1.5rem;
         margin-bottom: 3rem;
+        letter-spacing: 1.7px;
+        line-height: 150%;
     }
 
     select{
         width: 30%;
         height: 3rem;
+        margin-bottom: 2rem;
         border: 1px solid silver;
+        letter-spacing: 1.8px;
+        font-family: 'Montserrat', 'Lato', sans-serif;
     }
 
     @media screen and (max-width: 768px) {

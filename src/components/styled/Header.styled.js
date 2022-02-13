@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.header`
-    background-color: ${({theme})=> theme.colors.header};
+    background-color: ${({theme})=> theme.colors.body};
     padding: 40px 0px;
     color: ${({ theme }) => theme.colors.font};
     display: flex;
@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
 
 export const Logo = styled.h1`
     font-size: 3rem;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
 `
 
 export const Nav = styled.nav`
@@ -25,6 +26,7 @@ export const NavbarLink = styled(Link)`
     color: ${({ theme }) => theme.colors.font};
     cursor: pointer;
     text-decoration: none;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
     
     &:hover{
         transform: scale(0.98);

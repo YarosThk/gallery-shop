@@ -7,15 +7,19 @@ import { HomePage } from './pages/HomePage';
 import { ShoppingPage } from './pages/ShoppingPage';
 import { ItemPage } from './pages/ItemPage';
 import { ShoppingCart } from './pages/ShoppingCart';
-import { unmountComponentAtNode } from 'react-dom';
 
 const theme = {
   colors: {
-    header: '#fff',
+    body: '#fff',
     button: '#52ab28',
     font: '#B8B7B7',
     lightBg: '#c8d8e4',
     darkBg: '#2b6777',
+  },
+  fontWeight: {
+    bold: 600,
+    medium: 400,
+    thin: 200,
 
   }
 }
@@ -26,8 +30,8 @@ function App() {
   const addItemToCart = (item) => {
       // nuevo objeto entra en el Array, pero antes 
       // mirar si este objeto con este Id existe ya
-      let isAlreadyInCart = cart.some(cartItem => cartItem.id === item.id)
-    console.log(isAlreadyInCart)
+    let isAlreadyInCart = cart.some(cartItem => cartItem.id === item.id)
+
     if (isAlreadyInCart){
       // si existe, miramos print size , si igual pues actualizamos quantity + 1, 
       // si distinto añadimos con quantity = 1. 
@@ -46,15 +50,48 @@ function App() {
         let newItem = item
         newItem.quantity = 1
         setCart([...cart, newItem])
-      }
+        }
     
       }else{
         let newItem = item
         newItem.quantity = 1
         setCart([...cart, newItem])
-      }
+        }
 
   }
+
+  const removeItemFromCart = (id, printSize) => {
+    const updatedCart = cart.filter(cartItem => cartItem.id !== id || cartItem.printSize !== printSize)
+    console.log(updatedCart)
+    setCart([...updatedCart])
+  }
+
+  const increaseQuantity = (id, printSize) => {
+    const itemToUpdate = cart.find(cartItem => cartItem.id === id && cartItem.printSize === printSize)
+    let tempCart = [...cart]
+    let indexOfCartItem = tempCart.indexOf(itemToUpdate)
+    let tempCartItem = { ...tempCart[indexOfCartItem] }
+    tempCartItem.quantity++
+    tempCart[indexOfCartItem] = tempCartItem
+    setCart(tempCart)
+
+  }
+
+  const decreaseQuantity = (id, printSize) => {
+    const itemToUpdate = cart.find(cartItem => cartItem.id === id && cartItem.printSize === printSize)
+    let tempCart = [...cart]
+    let indexOfCartItem = tempCart.indexOf(itemToUpdate)
+    let tempCartItem = { ...tempCart[indexOfCartItem] }
+    tempCartItem.quantity--
+    if (tempCartItem.quantity === 0){
+      removeItemFromCart(id, printSize)
+    }else{
+      tempCart[indexOfCartItem] = tempCartItem
+      setCart(tempCart)
+    }
+  }
+
+  
 
   return (
     <ThemeProvider theme = {theme}>
@@ -65,8 +102,8 @@ function App() {
           <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="shop" element={<ShoppingPage />} />
-              <Route path="shop/:itemId" element={<ItemPage addItem = {addItemToCart}/>} />
-              <Route path="cart" element={<ShoppingCart cart={cart}/>} />
+              <Route path="shop/:itemId" element={<ItemPage addItem={addItemToCart} />}/>
+            <Route path="cart" element={<ShoppingCart cart={cart} removeItem={removeItemFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />}/>
               <Route
                 path="*"
                 element={

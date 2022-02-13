@@ -1,31 +1,26 @@
 import { ShoppingCartItem } from "../components/ShoppingCartItem.js";
 import { ShoppingCartSummary } from "../components/ShoppingCartSummary.js";
-import { CartGrid, SubTitle } from "../components/styled/Checkout.styled.js"
+import { CartGrid, EmptyCart } from "../components/styled/Checkout.styled.js"
 
 
-export const ShoppingCart = ({cart}) => {
+export const ShoppingCart = ({ cart, removeItem, increaseQuantity, decreaseQuantity}) => {
     console.log(cart)
-    return (
-        <CartGrid> 
-            <div>
-                <SubTitle>CESTA</SubTitle>
+    if(cart.length > 0){
+        return (
+            <CartGrid> 
                 {
-                    cart.map((item, i) => <ShoppingCartItem key={i} title={item.title} printSize={item.printSize} printPrice={item.printPrice} quantity={item.quantity} src={item.src} />)
+                    cart.map((item, i) => <ShoppingCartItem key={i} id={item.id} title={item.title} printSize={item.printSize} printPrice={item.printPrice} 
+                        quantity={item.quantity} src={item.src} removeItem={removeItem} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />)
                 }
-            </div>
-            <div>
-                <SubTitle>SUMMARY</SubTitle>
-                <ShoppingCartSummary/>
-            </div>
-        </CartGrid>
-    )
+                <ShoppingCartSummary />
+            </CartGrid>
+        )
+    }else{
+        return(
+                <EmptyCart> 
+                        <p>Cart is empty.</p>
+                        <p>¯\_(ツ)_/¯</p>
+                </EmptyCart>
+        ) 
+    }
 }
-
-
-
-// id: 1
-// printPrice: 14.99
-// printSize: "smallPrint"
-// quantity: 1
-// src: "/static/media/catch_taxi.5319e33c.jpg"
-// title: "Catching a cab"

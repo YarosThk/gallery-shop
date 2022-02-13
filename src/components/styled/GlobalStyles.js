@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-
   *,
   *::before,
   *::after {
@@ -16,9 +14,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({theme})=> theme.colors.header};
+    background: ${({theme})=> theme.colors.body};
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Lato', sans-serif;
   }
 
   img{

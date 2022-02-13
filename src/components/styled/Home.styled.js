@@ -11,7 +11,7 @@ export const Flex = styled.div`
     position: relative;
     text-align: center;
     background-color: black;
-    color: ${({ theme }) => theme.colors.header};
+    color: ${({ theme }) => theme.colors.body};
     height: 600px;
 
     @media screen and (max-width: 1200px) {
@@ -42,6 +42,7 @@ export const Heading = styled.h1`
     left: 10%;
     transform: translate(0%, -50%);
     font-size: 4rem;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
 
     @media screen and (max-width: 1200px) {
         font-size: 3rem;
@@ -71,10 +72,9 @@ export const Footer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.font};
-    color: ${({ theme }) => theme.colors.header};
+    color: ${({ theme }) => theme.colors.body};
     height: 40rem;
     width: 100%;
-    font-size: 10px;
 
     @media screen and (max-width: 1200px) {
         height: 35rem;
@@ -95,6 +95,7 @@ export const Footer = styled.div`
 
 export const FooterMessage = styled.h2`
     font-size: 5em;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
     margin-bottom: 1em;
 
     @media screen and (max-width: 1200px) {
