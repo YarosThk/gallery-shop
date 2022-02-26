@@ -27,6 +27,7 @@ const theme = {
 function App() {
   const [cart, setCart] = useState([])
 
+
   const addItemToCart = (item) => {
       // nuevo objeto entra en el Array, pero antes 
       // mirar si este objeto con este Id existe ya
@@ -50,12 +51,14 @@ function App() {
         let newItem = item
         newItem.quantity = 1
         setCart([...cart, newItem])
+
         }
     
       }else{
         let newItem = item
         newItem.quantity = 1
         setCart([...cart, newItem])
+
         }
 
   }
@@ -64,6 +67,7 @@ function App() {
     const updatedCart = cart.filter(cartItem => cartItem.id !== id || cartItem.printSize !== printSize)
     console.log(updatedCart)
     setCart([...updatedCart])
+
   }
 
   const increaseQuantity = (id, printSize) => {
@@ -88,11 +92,11 @@ function App() {
     }else{
       tempCart[indexOfCartItem] = tempCartItem
       setCart(tempCart)
+
     }
   }
 
   
-
   return (
     <ThemeProvider theme = {theme}>
       <GlobalStyle />

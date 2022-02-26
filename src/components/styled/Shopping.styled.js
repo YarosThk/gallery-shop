@@ -39,7 +39,7 @@ export const PhotoStyled = styled.figure`
 
 export const PreviewImg = styled.img`
     width:100%;
-    vertical-align: bottom;
+    ${'' /* vertical-align: bottom; */}
 `
 
 //-------------------------------------- END SHOP GALLERY-------------------------------------------------------------------
