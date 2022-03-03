@@ -26,9 +26,8 @@ export const ShoppingCartItem = ({ id, title, printSize, printPrice, quantity, s
                         <p>Quantity {quantity}</p>
                     </div>
                     <div>
-                        <span>{printPrice * quantity}€</span>
+                        <span>{Math.round(printPrice * quantity * 100) / 100}&nbsp;€</span>
                     </div>
-                    
                 </CartItemInfo>
                 <CartItemActions>
                     <RemoveButton onClick={handleRemove}> Remove </RemoveButton>

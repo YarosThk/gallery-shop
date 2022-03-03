@@ -1,42 +1,36 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { CartSummary} from "./styled/Checkout.styled.js"
+import { CartSummary, SummaryRowContainer, SummaryRow, SummaryRowTitle, SummaryRowAmount} from "./styled/Checkout.styled.js"
 import { SubTitle } from "../components/styled/Checkout.styled.js"
+import { GeneralButton } from "./styled/Buttons"
 
 export const ShoppingCartSummary = ({cart}) => {
-    const [cartSummary, setCartSummary] = useState({
-        subTotal: 0,
-        shippingFees: 5,
-        total: 0
-    })
+    let shippingFee = 0
 
-    useEffect(() => {
-        if (cart.length === 0) {
-
-        } else {
-            console.log(cart.reduce((prevItem, currentItem) => { return prevItem + (currentItem.quantity * currentItem.printPrice) }, 0))
-            // let reduced = cart.reduce((prevItem, currentItem) => { return prevItem + (currentItem.quantity * currentItem.printPrice) }, 0)
-            let tempSubTotal = Math.round(cart.reduce((prevItem, currentItem) => { return prevItem + (currentItem.quantity * currentItem.printPrice) }, 0) * 100) / 100
-            let tempTotal = Math.round((tempSubTotal + cartSummary.shippingFees)*100) / 100
-            let tempCartSummary = {...cartSummary}
-            tempCartSummary.subTotal = tempSubTotal
-            tempCartSummary.total = tempTotal
-            setCartSummary(tempCartSummary)
-        }
+    let subTotal = () => {
+        return Math.round(cart.reduce((prevItem, currentItem) => { return prevItem + (currentItem.quantity * currentItem.printPrice) }, 0) * 100) / 100
+    }
     
-    })
-    
-
+    let total = () => {
+        return subTotal() - shippingFee
+    }
 
     return (
         <CartSummary>
             <SubTitle>SUMMARY</SubTitle>
-            <ul>
-                <li>Subtotal: {cartSummary.subTotal} €</li>
-                <li>Shipping fees: {cartSummary.shippingFees} €</li>
-                <li>Total: {cartSummary.total} €</li>
-
-            </ul>
+            <SummaryRowContainer>
+                <SummaryRow>
+                    <SummaryRowTitle> <span>Subtotal:</span></SummaryRowTitle>
+                    <SummaryRowAmount> <span>{subTotal()}&nbsp;€</span> </SummaryRowAmount>
+                </SummaryRow>
+                <SummaryRow>
+                    <SummaryRowTitle> <span>Fees:</span> </SummaryRowTitle>
+                    <SummaryRowAmount> <span>{shippingFee}&nbsp;€</span> </SummaryRowAmount>
+                </SummaryRow>
+                <SummaryRow>
+                    <SummaryRowTitle> <span><b>Total:</b></span> </SummaryRowTitle>
+                    <SummaryRowAmount><span><b>{total()}&nbsp;€</b> </span></SummaryRowAmount>
+                </SummaryRow>
+            </SummaryRowContainer>
+            <GeneralButton>Checkout</GeneralButton>
         </CartSummary>
     )
 }

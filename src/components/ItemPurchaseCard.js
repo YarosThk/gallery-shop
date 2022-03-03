@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { ShopppingCard, ShoppingCardOptions, ImgContainerBig, PreviewImg } from "./styled/Shopping.styled.js"
-import {AddButton} from "./styled/Buttons"
+import {GeneralButton} from "./styled/Buttons"
 
 export const ItemPurchaseCard = ({ id, title, description, printSize, src, addItem }) => {
     const [selectedPrintSize, setSelectedPrintSize] = useState("smallPrint")
@@ -38,7 +38,7 @@ export const ItemPurchaseCard = ({ id, title, description, printSize, src, addIt
                     <option value="largePrint">Large print (36"x24")</option>
                 </select>
                 <div>
-                    <AddButton onClick={handleAddItem}> Add Item </AddButton>
+                    <GeneralButton onClick={handleAddItem}> Add Item </GeneralButton>
                 </div>
             </ShoppingCardOptions>
         </ShopppingCard>

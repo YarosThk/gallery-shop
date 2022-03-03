@@ -28,7 +28,7 @@ export const ItemsCol = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     margin-right: 3rem;
-    ${'' /* border: 3px solid blue; */}
+    ${'' /* border: 2px solid blue; */}
     
     @media screen and (max-width: 960px) {
         width: 100%;
@@ -37,7 +37,7 @@ export const ItemsCol = styled.div`
 
 export const CartItemMainContainer = styled.div`
     width:100%;
-    min-height: 177px;
+    ${'' /* min-height: 177px; */}
     margin-bottom: 5px;
     display: flex;
     letter-spacing: 1.7px;
@@ -77,8 +77,7 @@ export const CartItemActions = styled.div`
 
 
 export const ImgContainerSmall = styled.div`
-    width: 150px;
-    ${'' /* margin-right: 5px; */}
+    width: 170px;
     height: auto;
     display: flex;
     align-items: center;
@@ -88,7 +87,6 @@ export const CartSummary = styled.div`
     width: 35rem;
     letter-spacing: 1.7px;
     line-height: 150%;
-    ${'' /* border: 1px solid black; */}
 
     @media screen and (max-width: 960px) {
         width: 100%;
@@ -96,4 +94,29 @@ export const CartSummary = styled.div`
 `
 export const SubTitle = styled.h2`
     font-weight: ${({ theme }) => theme.fontWeight.medium};
+    margin-bottom: 1rem;
+`
+export const SummaryRowContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+export const SummaryRow = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    
+    &:nth-child(3) {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+`
+export const SummaryRowTitle = styled.div`
+    display: inline-block;
+`
+export const SummaryRowAmount = styled.div`
+    display: inline-block;
 `

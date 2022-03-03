@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AddButton = styled.button`
+export const GeneralButton = styled.button`
     cursor: pointer;
     text-decoration: none;
     padding: 1.2rem 1.8rem;
@@ -12,19 +12,15 @@ export const AddButton = styled.button`
     color: #fff;
     height: 50px;
     width: 100px;
-    ${'' /* min-width: 50px;
-    min-height: 48px; */}
 `
-export const RemoveButton = styled(AddButton)`
-    ${'' /* height: 40px; */}
+export const RemoveButton = styled(GeneralButton)`
     height: 9vw;
     width: 80px;
     max-height: 40px;
     padding: 0rem;
 `
 
-export const QuantityButton = styled(AddButton)`
-    ${'' /* height: 40px; */}
+export const QuantityButton = styled(GeneralButton)`
     height: 9vw;
     max-height: 40px;
     width: 40px;
