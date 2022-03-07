@@ -9,8 +9,9 @@ export const ShoppingGrid = styled.div`
 //--------------------------------------SHOP GALLERY-------------------------------------------------------------------
 
 export const GridContainer = styled.div`
-    margin: 40px;
+    margin: 2rem 10rem;
 `
+
 export const GalleryGrid = styled.div`
     columns: 4;
     column-gap: 1rem;

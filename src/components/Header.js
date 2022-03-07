@@ -1,19 +1,25 @@
-import { StyledHeader, Nav, Logo, NavbarLink } from "./styled/Header.styled"
-import { Container } from "./styled/Container.styled"
-import { FaShoppingCart } from 'react-icons/fa';
-import { CartButton } from "./styled/CartButton";
+import { useState, useEffect } from "react";
+import { DesktopHeader } from "./DesktopHeader";
+import { MobileHeader } from "./MobileHeader";
+import { StyledHeader} from "./styled/Header.styled"
 
 export const Header = ({cartItems}) =>{
+    const [windowSize, setWindowSize] = useState(window.innerWidth)
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowSize(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [])
+    
     return(
         <StyledHeader>
-            <Container>
-                <Logo> Galry </Logo>
-                <Nav>
-                    <NavbarLink to="/">Home </NavbarLink>
-                    <NavbarLink to="/shop">Shop </NavbarLink>
-                    <CartButton to="/cart"><FaShoppingCart /> <span> {cartItems}</span></CartButton>
-                </Nav>
-            </Container>
+            {windowSize > 500 ? <DesktopHeader cartItems={cartItems}/> : <MobileHeader cartItems={cartItems}/>}
         </StyledHeader>
     )
 }

@@ -12,7 +12,7 @@ export const ItemPage = ({addItem}) => {
 
     useEffect(() => {
         const getProduct = ()=>{
-            return photographs.find(el => el.id == params.itemId)
+            return photographs.find(el => el.id === parseInt(params.itemId))
         }
         const photo = getProduct()
         setProduct(photo)
