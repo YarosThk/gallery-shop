@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/gallery-shop/static/js/main.8a47c5c6.chunk.js",
+    "main.js.map": "/gallery-shop/static/js/main.8a47c5c6.chunk.js.map",
+    "runtime-main.js": "/gallery-shop/static/js/runtime-main.aa3d5794.js",
+    "runtime-main.js.map": "/gallery-shop/static/js/runtime-main.aa3d5794.js.map",
+    "static/js/2.3848dd89.chunk.js": "/gallery-shop/static/js/2.3848dd89.chunk.js",
+    "static/js/2.3848dd89.chunk.js.map": "/gallery-shop/static/js/2.3848dd89.chunk.js.map",
+    "index.html": "/gallery-shop/index.html",
+    "static/js/2.3848dd89.chunk.js.LICENSE.txt": "/gallery-shop/static/js/2.3848dd89.chunk.js.LICENSE.txt",
+    "static/media/catch_taxi.0c75ce70.webp": "/gallery-shop/static/media/catch_taxi.0c75ce70.webp",
+    "static/media/intro_beach.a53e04d8.webp": "/gallery-shop/static/media/intro_beach.a53e04d8.webp",
+    "static/media/intro_tower_bridge.6a9adbf2.webp": "/gallery-shop/static/media/intro_tower_bridge.6a9adbf2.webp",
+    "static/media/intro_travel.23aac4c3.webp": "/gallery-shop/static/media/intro_travel.23aac4c3.webp",
+    "static/media/night_london.e6a44236.webp": "/gallery-shop/static/media/night_london.e6a44236.webp",
+    "static/media/old_house.f51978e8.webp": "/gallery-shop/static/media/old_house.f51978e8.webp",
+    "static/media/sea_shore.48852708.webp": "/gallery-shop/static/media/sea_shore.48852708.webp",
+    "static/media/sunset.385726b8.webp": "/gallery-shop/static/media/sunset.385726b8.webp",
+    "static/media/tower_bridge.843d2a0a.webp": "/gallery-shop/static/media/tower_bridge.843d2a0a.webp",
+    "static/media/towers.92338df1.webp": "/gallery-shop/static/media/towers.92338df1.webp",
+    "static/media/walk_park.307f2d2b.webp": "/gallery-shop/static/media/walk_park.307f2d2b.webp",
+    "static/media/woman_dog.c241258e.webp": "/gallery-shop/static/media/woman_dog.c241258e.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa3d5794.js",
+    "static/js/2.3848dd89.chunk.js",
+    "static/js/main.8a47c5c6.chunk.js"
+  ]
+}
