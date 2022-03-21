@@ -4,7 +4,6 @@ export const CartGrid = styled.div`
     margin: 0 40px;
     display: flex;
     justify-content: center;
-    ${'' /* border: 1px solid violet; */}
 
     @media screen and (max-width: 960px) {
         flex-direction: column;
@@ -28,7 +27,7 @@ export const ItemsCol = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     margin-right: 3rem;
-    ${'' /* border: 2px solid blue; */}
+    margin-bottom: 3rem;
     
     @media screen and (max-width: 960px) {
         width: 100%;
@@ -37,12 +36,10 @@ export const ItemsCol = styled.div`
 
 export const CartItemMainContainer = styled.div`
     width:100%;
-    ${'' /* min-height: 177px; */}
     margin-bottom: 5px;
     display: flex;
     letter-spacing: 1.7px;
     line-height: 150%;
-    ${'' /* border: 2px solid green; */}
     border-bottom: 1px solid lightgray;
 `
 
@@ -54,7 +51,6 @@ export const CartItemInfoContainer = styled.div`
         "description"
         "actions"
     ;
-    ${'' /* border: 1px solid orange; */}
 `
 export const CartItemInfo = styled.div`
     display: flex;

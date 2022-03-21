@@ -3,6 +3,7 @@ import { PreviewImg } from "./styled/Shopping.styled.js"
 import { RemoveButton, QuantityButton } from "./styled/Buttons.js"
 
 export const ShoppingCartItem = ({ id, title, printSize, printPrice, quantity, src, removeItem, increaseQuantity, decreaseQuantity}) => {
+    
     const handleRemove = () =>{
         removeItem(id, printSize)
     }

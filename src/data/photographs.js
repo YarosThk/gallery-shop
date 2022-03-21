@@ -1,12 +1,12 @@
-import catch_taxi from "../images/products/catch_taxi.jpg"
-import night_longon from "../images/products/night_london.jpg"
-import old_house from "../images/products/old_house.jpg"
-import sea_shore from "../images/products/sea_shore.jpg"
-import sunset from "../images/products/sunset.jpg"
-import tower_bridge from "../images/products/tower_bridge.jpg"
-import towers from "../images/products/towers.jpg"
-import walk_park from "../images/products/walk_park.jpg"
-import woman_dog from "../images/products/woman_dog.jpg"
+import catch_taxi from "../images/products/catch_taxi.webp"
+import night_longon from "../images/products/night_london.webp"
+import old_house from "../images/products/old_house.webp"
+import sea_shore from "../images/products/sea_shore.webp"
+import sunset from "../images/products/sunset.webp"
+import tower_bridge from "../images/products/tower_bridge.webp"
+import towers from "../images/products/towers.webp"
+import walk_park from "../images/products/walk_park.webp"
+import woman_dog from "../images/products/woman_dog.webp"
 
 export const photographs = [
         {

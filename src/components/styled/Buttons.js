@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const GeneralButton = styled.button`
     cursor: pointer;
     text-decoration: none;
-    padding: 1.2rem 1.8rem;
     margin-right: 1rem;
     font-size: 1.2rem;
     text-transform: uppercase;

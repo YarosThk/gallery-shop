@@ -29,13 +29,12 @@ function App() {
 
 
   const addItemToCart = (item) => {
-      // nuevo objeto entra en el Array, pero antes 
-      // mirar si este objeto con este Id existe ya
+      // new item enters the array, but first check if item with same Id exists
     let isAlreadyInCart = cart.some(cartItem => cartItem.id === item.id)
 
     if (isAlreadyInCart){
-      // si existe, miramos print size , si igual pues actualizamos quantity + 1, 
-      // si distinto añadimos con quantity = 1. 
+      //if exists with same id, look print size, if same size thene add 1 to the quantity
+      // if print size is different then add item with quantity 1
       const alreadyExistingItems = cart.filter(cartItem => cartItem.id === item.id)
       const samePrintSize = alreadyExistingItems.some(existingItem => existingItem.printSize === item.printSize)
 
