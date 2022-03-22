@@ -4,6 +4,11 @@ import { RemoveButton, QuantityButton } from "./styled/Buttons.js"
 
 export const ShoppingCartItem = ({ id, title, printSize, printPrice, quantity, src, removeItem, increaseQuantity, decreaseQuantity}) => {
     
+    const sizeMap = {
+        smallPrint : "Small print",
+        mediumPrimt: "Medium print",
+        largePrint : "Large print"
+    }
     const handleRemove = () =>{
         removeItem(id, printSize)
     }
@@ -23,7 +28,7 @@ export const ShoppingCartItem = ({ id, title, printSize, printPrice, quantity, s
                 <CartItemInfo>
                     <div>
                         <h2>{title}</h2>
-                        <p>Size {printSize}</p>
+                        <p>{sizeMap[printSize]}</p>
                         <p>Quantity {quantity}</p>
                     </div>
                     <div>

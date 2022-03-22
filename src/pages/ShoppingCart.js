@@ -4,6 +4,7 @@ import { CartGrid, EmptyCart } from "../components/styled/Checkout.styled.js"
 
 
 export const ShoppingCart = ({ cart, removeItem, increaseQuantity, decreaseQuantity}) => {
+    console.log(cart)
     if(cart.length > 0){
         return (
             <CartGrid> 
