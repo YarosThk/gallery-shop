@@ -106,7 +106,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="shop" element={<ShoppingPage />} />
               <Route path="shop/:itemId" element={<ItemPage addItem={addItemToCart} />}/>
-            <Route path="cart" element={<ShoppingCart cart={cart} removeItem={removeItemFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />}/>
+              <Route path="cart" element={<ShoppingCart cart={cart} removeItem={removeItemFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />}/>
               <Route
                 path="*"
                 element={
